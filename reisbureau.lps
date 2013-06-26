@@ -9,7 +9,6 @@
         <Filename Value="reisbureau.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="reisbureau"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
@@ -24,10 +23,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="97" Y="8"/>
+        <TopLine Value="15"/>
+        <CursorPos X="73" Y="56"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -125,7 +125,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="9" HistoryIndex="8">
+    <JumpHistory Count="11" HistoryIndex="10">
       <Position1>
         <Filename Value="unit1.pas"/>
         <Caret Line="1" Column="1" TopLine="1"/>
@@ -162,6 +162,14 @@
         <Filename Value="unit1.pas"/>
         <Caret Line="48" Column="11" TopLine="9"/>
       </Position9>
+      <Position10>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="8" Column="97" TopLine="1"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="9" Column="35" TopLine="1"/>
+      </Position11>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

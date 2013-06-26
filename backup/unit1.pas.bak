@@ -5,7 +5,8 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, unit3, unit4;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ButtonPanel, unit3, unit4, unit5;
 
 type
 
@@ -15,9 +16,11 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    ButtonPanel1: TButtonPanel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure OKButtonClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -46,6 +49,11 @@ end;
 procedure TForm1.Button3Click(Sender: TObject);
 begin
      Form7.show;
+end;
+
+procedure TForm1.OKButtonClick(Sender: TObject);
+begin
+  showmessage('(c) Nick, Yves, Stijn, Alexander & Charlotte');
 end;
 
 end.
