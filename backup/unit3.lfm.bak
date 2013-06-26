@@ -1,7 +1,7 @@
 object Form5: TForm5
-  Left = 599
+  Left = 310
   Height = 246
-  Top = 285
+  Top = 147
   Width = 352
   Caption = 'Form5'
   ClientHeight = 246
@@ -60,5 +60,39 @@ object Form5: TForm5
     Width = 75
     Caption = 'Save'
     TabOrder = 3
+  end
+  object MySQL55Connection1: TMySQL55Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'KLANTEN'
+    KeepConnection = False
+    Params.Strings = (
+      'Port=3306'
+    )
+    Password = '91c8gFd6'
+    Transaction = SQLTransaction1
+    UserName = 'webstnh61_hirbi'
+    HostName = '46.21.173.133'
+    LogEvents = []
+    left = 48
+    top = 192
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Action = caNone
+    Database = MySQL55Connection1
+    left = 139
+    top = 192
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL55Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from KLANTEN'
+    )
+    Params = <>
+    left = 224
+    top = 192
   end
 end

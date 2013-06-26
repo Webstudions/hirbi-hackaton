@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  klanten;
+  klanten, mysql55conn, sqldb;
 
 type
 
@@ -16,6 +16,9 @@ type
     Button1: TButton;
     fnaam: TEdit;
     anaam: TEdit;
+    MySQL55Connection1: TMySQL55Connection;
+    SQLQuery1: TSQLQuery;
+    SQLTransaction1: TSQLTransaction;
     tnr: TEdit;
     Label1: TLabel;
     Label2: TLabel;
