@@ -214,11 +214,43 @@ object Form7: TForm7
       OKButton.DefaultCaption = True
       HelpButton.Name = 'HelpButton'
       HelpButton.DefaultCaption = True
+      HelpButton.OnClick = HelpButtonClick
       CloseButton.Name = 'CloseButton'
       CloseButton.DefaultCaption = True
       CancelButton.Name = 'CancelButton'
       CancelButton.DefaultCaption = True
       TabOrder = 0
     end
+  end
+  object MySQL55Connection1: TMySQL55Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'webstnh61_hirbi'
+    KeepConnection = False
+    Params.Strings = (
+      'Port=3306'
+    )
+    Password = '91c8gFd6'
+    Transaction = SQLTransaction1
+    UserName = 'webstnh61_hirbi'
+    HostName = '46.21.173.133'
+    LogEvents = []
+    left = 148
+    top = 585
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Action = caNone
+    Database = MySQL55Connection1
+    left = 324
+    top = 586
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL55Connection1
+    Transaction = SQLTransaction1
+    Params = <>
+    left = 496
+    top = 593
   end
 end

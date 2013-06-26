@@ -57,8 +57,6 @@ begin
   showmessage('(c) Nick, Yves, Stijn, Alexander & Charlotte');
 end;
 
-initialize
-
 
 
 end.
