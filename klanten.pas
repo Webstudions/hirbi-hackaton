@@ -25,7 +25,7 @@ type
   TKlantenLijst=Class(TList)
     private
     public
-      procedure loadfromfile;
+      //procedure loadfromfile;
   end;
 
 implementation

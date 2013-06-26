@@ -61,5 +61,9 @@ implementation
         result:=tnr;
    end;
 
+   // Type TKlantenLijst
+
+
+
 end.
 

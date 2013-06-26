@@ -59,12 +59,13 @@ object Form5: TForm5
     Top = 160
     Width = 75
     Caption = 'Save'
+    OnClick = Button1Click
     TabOrder = 3
   end
   object MySQL55Connection1: TMySQL55Connection
-    Connected = False
+    Connected = True
     LoginPrompt = False
-    DatabaseName = 'KLANTEN'
+    DatabaseName = 'webstnh61_hirbi'
     KeepConnection = False
     Params.Strings = (
       'Port=3306'
@@ -78,14 +79,34 @@ object Form5: TForm5
     top = 192
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caNone
     Database = MySQL55Connection1
     left = 139
     top = 192
   end
   object SQLQuery1: TSQLQuery
-    FieldDefs = <>
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftAutoInc
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'VNAAM'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end    
+      item
+        Name = 'ANAAM'
+        DataType = ftString
+        Precision = -1
+        Size = 40
+      end>
+    Active = True
     Database = MySQL55Connection1
     Transaction = SQLTransaction1
     SQL.Strings = (

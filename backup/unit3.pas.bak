@@ -23,6 +23,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    procedure Button1Click(Sender: TObject);
     procedure tnrExit(Sender: TObject);
   private
     { private declarations }
@@ -47,6 +48,12 @@ begin
      except
      messagedlg('ça ne marche pas!', mtError,[mbOK], 0);
      end;
+end;
+
+procedure TForm5.Button1Click(Sender: TObject);
+begin
+  if((fnaam.text='') or (anaam.text='') or (tnr.text='')) then messagedlg('U heeft niet alle velden ingevuld', mtError, [mbok], 0);
+  SQLQuery1.
 end;
 
 end.
