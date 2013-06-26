@@ -5,10 +5,15 @@ unit Unit4; // Klanten wijzigen
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
+
+  { TForm6 }
+
   TForm6 = class(TForm)
+    Buttonreis: TButton;
+    procedure ButtonreisClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -21,6 +26,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm6 }
+
+procedure TForm6.ButtonreisClick(Sender: TObject);
+begin
+  form7.show;
+end;
 
 end.
 

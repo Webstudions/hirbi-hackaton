@@ -4,8 +4,8 @@ object Form7: TForm7
   Top = 160
   Width = 1200
   Caption = 'Form7'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 742
+  ClientWidth = 1200
   OnCreate = FormCreate
   LCLVersion = '1.0.8.0'
   object Panellinksboven: TPanel
@@ -214,6 +214,7 @@ object Form7: TForm7
       OKButton.DefaultCaption = True
       HelpButton.Name = 'HelpButton'
       HelpButton.DefaultCaption = True
+      HelpButton.OnClick = HelpButtonClick
       CloseButton.Name = 'CloseButton'
       CloseButton.DefaultCaption = True
       CancelButton.Name = 'CancelButton'

@@ -1,8 +1,19 @@
 object Form6: TForm6
   Left = 564
-  Height = 240
+  Height = 375
   Top = 97
-  Width = 320
+  Width = 418
   Caption = 'Form6'
+  ClientHeight = 375
+  ClientWidth = 418
   LCLVersion = '1.0.8.0'
+  object Buttonreis: TButton
+    Left = 53
+    Height = 25
+    Top = 124
+    Width = 75
+    Caption = 'Reis kiezen'
+    OnClick = ButtonreisClick
+    TabOrder = 0
+  end
 end

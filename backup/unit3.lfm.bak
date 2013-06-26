@@ -63,7 +63,7 @@ object Form5: TForm5
     TabOrder = 3
   end
   object MySQL55Connection1: TMySQL55Connection
-    Connected = True
+    Connected = False
     LoginPrompt = False
     DatabaseName = 'webstnh61_hirbi'
     KeepConnection = False
@@ -79,14 +79,13 @@ object Form5: TForm5
     top = 192
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Action = caNone
     Database = MySQL55Connection1
     left = 139
     top = 192
   end
   object SQLQuery1: TSQLQuery
-    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'ID'
@@ -112,7 +111,6 @@ object Form5: TForm5
         Precision = -1
         Size = 0
       end>
-    Active = True
     Database = MySQL55Connection1
     Transaction = SQLTransaction1
     SQL.Strings = (
