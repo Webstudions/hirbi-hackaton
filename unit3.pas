@@ -53,7 +53,14 @@ end;
 procedure TForm5.Button1Click(Sender: TObject);
 begin
   if((fnaam.text='') or (anaam.text='') or (tnr.text='')) then messagedlg('U heeft niet alle velden ingevuld', mtError, [mbok], 0);
-  SQLQuery1.
+  SQLQuery1.Active:=FALSE;
+  SQLQuery1.SQL.Clear;
+  SQLQuery1.SQL.Add('INSERT INTO KLANTEN (VNAAM, ANAAM, TELNR)');
+  SQLQuery1.SQL.Add('VALUES (:fnaam, :anaam, :tnr)');
+  SQLQuery1.Params.ParamByName('fnaam').Value := fnaam.text;
+  SQLQuery1.Params.ParamByName('anaam').Value := anaam.text;
+  SQLQuery1.Params.ParamByName('tnr').Value := strtoint(tnr.text);
+  SQLQuery1.ExecSQL;
 end;
 
 end.

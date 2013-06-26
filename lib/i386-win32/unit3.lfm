@@ -105,6 +105,12 @@ object Form5: TForm5
         DataType = ftString
         Precision = -1
         Size = 40
+      end    
+      item
+        Name = 'TELNR'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
       end>
     Active = True
     Database = MySQL55Connection1
