@@ -54,18 +54,21 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form2"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
       </Unit2>
       <Unit3>
         <Filename Value="klanten-wijzigen.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form3"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
       </Unit3>
       <Unit4>
         <Filename Value="reizen-boeken.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form4"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
       </Unit4>
       <Unit5>
         <Filename Value="unit2.pas"/>
@@ -76,7 +79,6 @@
         <Filename Value="unit3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form5"/>
-        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit3"/>
       </Unit6>
@@ -84,7 +86,6 @@
         <Filename Value="unit4.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form6"/>
-        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit4"/>
       </Unit7>
@@ -92,7 +93,6 @@
         <Filename Value="unit5.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form7"/>
-        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit5"/>
       </Unit8>
