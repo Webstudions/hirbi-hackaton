@@ -1,7 +1,7 @@
 object Form7: TForm7
-  Left = 293
+  Left = 579
   Height = 728
-  Top = 239
+  Top = 310
   Width = 1120
   Caption = 'Form7'
   ClientHeight = 728
@@ -19,12 +19,12 @@ object Form7: TForm7
     ClientWidth = 624
     TabOrder = 0
     object Labelreis: TLabel
-      Left = 528
+      Left = 32
       Height = 41
-      Top = 0
-      Width = 95
-      Caption = 'REIZEN'
-      Color = clMenuHighlight
+      Top = 8
+      Width = 55
+      Caption = 'leeg'
+      Color = clSilver
       Font.Height = -29
       ParentColor = False
       ParentFont = False
@@ -87,6 +87,14 @@ object Form7: TForm7
       Caption = 'Bevestig de reis'
       OnClick = ButtonwegschrijvenClick
       TabOrder = 6
+    end
+    object idselected: TEdit
+      Left = 48
+      Height = 23
+      Top = 312
+      Width = 80
+      TabOrder = 7
+      Text = 'idselected'
     end
   end
   object Panelrechtsboven: TPanel

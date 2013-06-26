@@ -61,6 +61,7 @@ begin
   SQLQuery1.Params.ParamByName('anaam').Value := anaam.text;
   SQLQuery1.Params.ParamByName('tnr').Value := strtoint(tnr.text);
   SQLQuery1.ExecSQL;
+  form5.close;
 end;
 
 end.

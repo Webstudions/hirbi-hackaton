@@ -4,8 +4,8 @@ object Form5: TForm5
   Top = 149
   Width = 352
   Caption = 'Form5'
-  ClientHeight = 246
-  ClientWidth = 352
+  ClientHeight = 0
+  ClientWidth = 0
   LCLVersion = '1.0.8.0'
   object fnaam: TEdit
     Left = 136

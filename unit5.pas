@@ -23,6 +23,7 @@ type
     ComboBoxfrankrijk: TComboBox;
     ComboBoxbelgie: TComboBox;
     ComboBoxland: TComboBox;
+    idselected: TEdit;
     Editbegin: TEdit;
     Editeind: TEdit;
     Labelextrainfo: TLabel;
@@ -104,20 +105,9 @@ begin
 end;
 
 procedure TForm7.ButtonwegschrijvenClick(Sender: TObject);
-var//F:textfile;
+var
   hotel:string;
 begin
-  {assignfile(F,bestandsnaam);
-  append(F);
-  hotel:='niet ingevuld';
-  if comboboxbelgie.enabled=true then
-  hotel:=comboboxbelgie.text
-  else if comboboxfrankrijk.enabled=true  then
-  hotel:=comboboxfrankrijk.text else if comboboxspanje.enabled=true then
-  hotel:=comboboxspanje.text else;
-  writeln(f,'B:',  editbegin.text, ' E:', editeind.text,' ', comboboxland.Text,' ',hotel, ' extra opmerkingen: ', memoextrainfo.text) ;
-
-  closefile(f);          }
 
   hotel:='niet ingevuld';
   if comboboxbelgie.enabled=true then
@@ -127,14 +117,14 @@ begin
   hotel:=comboboxspanje.text else;
   SQLQuery1.Active:=FALSE;
   SQLQuery1.SQL.Clear;
-  SQLQuery1.SQL.Add('INSERT INTO REIZEN (BEGINDATUM, EINDDATUM, LAND, HOTEL, DESCRIPTION)');
-  SQLQuery1.SQL.Add('VALUES (:begindatum, :einddatum, :land, :hotel, :description)');
+  SQLQuery1.SQL.Add('INSERT INTO REIZEN (BEGINDATUM, EINDDATUM, LAND, HOTEL, DESCRIPTION, KLANTID)');
+  SQLQuery1.SQL.Add('VALUES (:begindatum, :einddatum, :land, :hotel, :description, :klantid)');
   SQLQuery1.Params.ParamByName('begindatum').Value := editbegin.text;
   SQLQuery1.Params.ParamByName('einddatum').Value :=editeind.text;
   SQLQuery1.Params.ParamByName('land').Value := comboboxland.text;
   SQLQuery1.Params.ParamByName('hotel').Value := hotel;
   SQLQuery1.Params.ParamByName('description').Value := memoextrainfo.text;
-
+  SQLQuery1.Params.ParamByName('klantid').Value := idselected.text;
   SQLQuery1.ExecSQL;
 end;
 

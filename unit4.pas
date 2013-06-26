@@ -13,13 +13,17 @@ type
   { TForm6 }
 
   TForm6 = class(TForm)
-    Buttonreis: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
     MySQL55Connection1: TMySQL55Connection;
     SQLQuery1: TSQLQuery;
     SQLTransaction1: TSQLTransaction;
     StringGrid1: TStringGrid;
-    procedure ButtonreisClick(Sender: TObject);
-    procedure filform;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure StringGrid1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -28,6 +32,8 @@ type
 
 var
   Form6: TForm6;
+  idselected:integer;
+  nameselected:string;
 
 implementation
 
@@ -35,31 +41,43 @@ implementation
 
 { TForm6 }
 
-procedure TForm6.ButtonreisClick(Sender: TObject);
+procedure TForm6.Button1Click(Sender: TObject);
+var i:integer; j:integer;
 begin
+     i:=1;
+     SQLQuery1.open;
+     while not SQLQuery1.Eof do begin
+           stringgrid1.rowcount:=i+1;
+           stringgrid1.Cells[0,i]:=SQLquery1.FieldByName('ID').AsString;
+           stringgrid1.Cells[1,i]:=SQLquery1.FieldByName('VNAAM').AsString;
+           stringgrid1.Cells[2,i]:=SQLquery1.FieldByName('ANAAM').AsString;
+           stringgrid1.Cells[3,i]:=SQLquery1.FieldByName('TELNR').AsString;
+           SQLQuery1.Next;
+           inc(i);
+     end;
+     SQLQuery1.close;
+end;
+
+procedure TForm6.Button2Click(Sender: TObject);
+begin
+  form6.close;
+end;
+
+procedure TForm6.Button3Click(Sender: TObject);
+begin
+  idselected:=stringgrid1.row;
+  nameselected:=stringgrid1.Cells[1,idselected];
+  form7.labelreis.caption:='Boek een reis voor '+nameselected;
+  form7.idselected.text:=inttostr(stringgrid1.Row);
   form7.show;
 end;
 
-procedure TForm6.filform;
-var i:integer;
+procedure TForm6.StringGrid1Click(Sender: TObject);
 begin
-  SQLQuery1.Active:=FALSE;
-  SQLQuery1.SQL.Clear;
-  SQLQuery1.SQL.Add('SELECT * FROM KLANTEN');
-  SQLQuery1.ExecSQL;
-  i:=1;
-  while not  SQLQuery1.EOF do begin
-    showmessage('we zitten erin');
-    stringgrid1.Cells[1,i]:=SQLquery1.FieldByName('VNAAM').AsString;
-    sqlquery1.Next;
-    inc(i);
-  end;
+  Button3.enabled:=TRUE;
+end;
 
-end;
 initialization
-begin
-form6.filform;
-end;
 
 end.
 
