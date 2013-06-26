@@ -1,8 +1,64 @@
 object Form5: TForm5
-  Left = 1029
-  Height = 240
-  Top = 160
-  Width = 320
+  Left = 599
+  Height = 246
+  Top = 285
+  Width = 352
   Caption = 'Form5'
+  ClientHeight = 246
+  ClientWidth = 352
   LCLVersion = '1.0.8.0'
+  object fnaam: TEdit
+    Left = 136
+    Height = 23
+    Top = 32
+    Width = 200
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 16
+    Top = 32
+    Width = 59
+    Caption = 'Voornaam:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 16
+    Top = 72
+    Width = 69
+    Caption = 'Achternaam:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 20
+    Height = 16
+    Top = 112
+    Width = 97
+    Caption = 'Telefoonnummer:'
+    ParentColor = False
+  end
+  object anaam: TEdit
+    Left = 136
+    Height = 23
+    Top = 72
+    Width = 200
+    TabOrder = 1
+  end
+  object tnr: TEdit
+    Left = 136
+    Height = 23
+    Top = 112
+    Width = 200
+    OnExit = tnrExit
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 261
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Save'
+    TabOrder = 3
+  end
 end

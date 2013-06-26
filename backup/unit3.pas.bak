@@ -1,14 +1,26 @@
-unit Unit3;
+unit Unit3; // Klanten maken
 
 {$mode objfpc}{$H+}
 
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  klanten;
 
 type
+
+  { TForm5 }
+
   TForm5 = class(TForm)
+    Button1: TButton;
+    fnaam: TEdit;
+    anaam: TEdit;
+    tnr: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    procedure tnrExit(Sender: TObject);
   private
     { private declarations }
   public
@@ -21,6 +33,18 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm5 }
+
+procedure TForm5.tnrExit(Sender: TObject);
+var value:integer;
+begin
+     try
+     value := strtoint(tnr.text);
+     except
+     messagedlg('ça ne marche pas!', mtError,[mbOK], 0);
+     end;
+end;
 
 end.
 

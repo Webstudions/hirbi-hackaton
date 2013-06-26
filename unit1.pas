@@ -29,6 +29,7 @@ type
 
 var
   Form1: TForm1;
+  klantenlijst:TList;
 
 implementation
 
@@ -55,6 +56,10 @@ procedure TForm1.OKButtonClick(Sender: TObject);
 begin
   showmessage('(c) Nick, Yves, Stijn, Alexander & Charlotte');
 end;
+
+initialize
+
+
 
 end.
 

@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 191
+  Left = 85
   Height = 346
-  Top = 239
+  Top = 172
   Width = 410
   Caption = 'Form1'
   ClientHeight = 346
@@ -41,9 +41,9 @@ object Form1: TForm1
     Width = 398
     OKButton.Name = 'OKButton'
     OKButton.DefaultCaption = True
-    OKButton.OnClick = OKButtonClick
     HelpButton.Name = 'HelpButton'
     HelpButton.DefaultCaption = True
+    HelpButton.OnClick = OKButtonClick
     CloseButton.Name = 'CloseButton'
     CloseButton.DefaultCaption = True
     CancelButton.Name = 'CancelButton'
