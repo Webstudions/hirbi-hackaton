@@ -1,19 +1,86 @@
 object Form6: TForm6
   Left = 564
-  Height = 375
+  Height = 658
   Top = 97
-  Width = 418
+  Width = 713
   Caption = 'Form6'
-  ClientHeight = 375
-  ClientWidth = 418
+  ClientHeight = 658
+  ClientWidth = 713
   LCLVersion = '1.0.8.0'
   object Buttonreis: TButton
-    Left = 53
+    Left = 584
     Height = 25
-    Top = 124
+    Top = 576
     Width = 75
     Caption = 'Reis kiezen'
     OnClick = ButtonreisClick
     TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 48
+    Height = 288
+    Top = 112
+    Width = 472
+    AutoFillColumns = True
+    ColCount = 4
+    FixedCols = 0
+    TabOrder = 1
+    ColWidths = (
+      117
+      117
+      117
+      117
+    )
+    Cells = (
+      4
+      0
+      0
+      'ID'
+      1
+      0
+      'Voornaam'
+      2
+      0
+      'Achternaam'
+      3
+      0
+      'Telefoonnummer'
+    )
+  end
+  object MySQL55Connection1: TMySQL55Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'webstnh61_hirbi'
+    KeepConnection = False
+    Params.Strings = (
+      'Port=3306'
+    )
+    Password = '91c8gFd6'
+    Transaction = SQLTransaction1
+    UserName = 'webstnh61_hirbi'
+    HostName = '46.21.173.133'
+    LogEvents = []
+    left = 176
+    top = 16
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Action = caNone
+    Database = MySQL55Connection1
+    left = 382
+    top = 29
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL55Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT *'
+      'from KLANTEN'
+      ''
+    )
+    Params = <>
+    left = 519
+    top = 42
   end
 end
