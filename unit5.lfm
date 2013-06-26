@@ -1,8 +1,224 @@
 object Form7: TForm7
-  Left = 1029
-  Height = 240
+  Left = 668
+  Height = 742
   Top = 160
-  Width = 320
+  Width = 1200
   Caption = 'Form7'
+  ClientHeight = 742
+  ClientWidth = 1200
+  OnCreate = FormCreate
   LCLVersion = '1.0.8.0'
+  object Panellinksboven: TPanel
+    Left = 0
+    Height = 396
+    Top = 0
+    Width = 624
+    Align = alLeft
+    BevelOuter = bvLowered
+    ClientHeight = 396
+    ClientWidth = 624
+    TabOrder = 0
+    object Labelreis: TLabel
+      Left = 528
+      Height = 41
+      Top = 0
+      Width = 95
+      Caption = 'REIZEN'
+      Color = clMenuHighlight
+      Font.Height = -29
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object Calendar1: TCalendar
+      Left = 32
+      Height = 160
+      Top = 80
+      Width = 169
+      DateTime = 41451
+      TabOrder = 0
+    end
+    object Buttonbegin: TButton
+      Left = 272
+      Height = 25
+      Top = 104
+      Width = 123
+      Caption = 'Bevestig begin datum'
+      OnClick = ButtonbeginClick
+      TabOrder = 1
+    end
+    object Buttoneinde: TButton
+      Left = 272
+      Height = 25
+      Top = 160
+      Width = 123
+      Caption = 'Bevestig eind datum'
+      OnClick = ButtoneindeClick
+      TabOrder = 2
+    end
+    object Editbegin: TEdit
+      Left = 449
+      Height = 23
+      Top = 104
+      Width = 80
+      TabOrder = 3
+    end
+    object Editeind: TEdit
+      Left = 449
+      Height = 23
+      Top = 163
+      Width = 80
+      TabOrder = 4
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 556
+      Height = 23
+      Top = 104
+      Width = 50
+      MaxValue = 1000000000
+      TabOrder = 5
+      Visible = False
+    end
+    object Buttonwegschrijven: TButton
+      Left = 336
+      Height = 60
+      Top = 288
+      Width = 240
+      Caption = 'Bevestig de reis'
+      OnClick = ButtonwegschrijvenClick
+      TabOrder = 6
+    end
+  end
+  object Panelrechtsboven: TPanel
+    Left = 624
+    Height = 396
+    Top = 0
+    Width = 576
+    Align = alRight
+    ClientHeight = 396
+    ClientWidth = 576
+    TabOrder = 1
+    object labelland: TLabel
+      Left = 50
+      Height = 29
+      Top = 56
+      Width = 43
+      Caption = 'Land'
+      Font.Height = -20
+      ParentColor = False
+      ParentFont = False
+    end
+    object LabelHotel: TLabel
+      Left = 338
+      Height = 29
+      Top = 56
+      Width = 49
+      Caption = 'Hotel'
+      Font.Height = -20
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBoxland: TComboBox
+      Left = 24
+      Height = 23
+      Top = 112
+      Width = 148
+      ItemHeight = 15
+      Items.Strings = (
+        'België'
+        'Frankrijk'
+        'Spanje'
+      )
+      OnChange = ComboBoxlandChange
+      TabOrder = 0
+      Text = '<vul in>'
+    end
+    object ComboBoxfrankrijk: TComboBox
+      Left = 328
+      Height = 23
+      Top = 184
+      Width = 124
+      Enabled = False
+      ItemHeight = 15
+      Items.Strings = (
+        'The moulin Rouge'
+        'Luccotel'
+        'Club Belambra'
+      )
+      TabOrder = 1
+      Text = '<vul in>'
+    end
+    object ComboBoxbelgie: TComboBox
+      Left = 328
+      Height = 23
+      Top = 112
+      Width = 124
+      Enabled = False
+      ItemHeight = 15
+      Items.Strings = (
+        'The lodge'
+        'Parkinn'
+        'Hilton'
+      )
+      TabOrder = 2
+      Text = '<vul in>'
+    end
+    object ComboBoxspanje: TComboBox
+      Left = 328
+      Height = 23
+      Top = 256
+      Width = 124
+      Enabled = False
+      ItemHeight = 15
+      Items.Strings = (
+        'Estival'
+        'Palmbeach'
+        'Formigal'
+      )
+      TabOrder = 3
+      Text = '<vul in>'
+    end
+    object Memoextrainfo: TMemo
+      Left = 64
+      Height = 90
+      Top = 264
+      Width = 150
+      TabOrder = 4
+    end
+    object Labelextrainfo: TLabel
+      Left = 64
+      Height = 16
+      Top = 234
+      Width = 78
+      Caption = 'De klant wenst'
+      ParentColor = False
+    end
+  end
+  object Panelonder: TPanel
+    Left = 0
+    Height = 346
+    Top = 396
+    Width = 1200
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 346
+    ClientWidth = 1200
+    TabOrder = 2
+    OnClick = PanelonderClick
+    object ButtonPanel1: TButtonPanel
+      Left = 6
+      Height = 34
+      Top = 306
+      Width = 1188
+      OKButton.Name = 'OKButton'
+      OKButton.DefaultCaption = True
+      HelpButton.Name = 'HelpButton'
+      HelpButton.DefaultCaption = True
+      CloseButton.Name = 'CloseButton'
+      CloseButton.DefaultCaption = True
+      CancelButton.Name = 'CancelButton'
+      CancelButton.DefaultCaption = True
+      TabOrder = 0
+    end
+  end
 end
